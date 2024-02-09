@@ -4,8 +4,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Copiando los ficheros'
-                sh 'apt install nodejs'
-                sh 'node -v'
                 sh 'npm install'
                 
             }
