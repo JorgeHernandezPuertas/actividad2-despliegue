@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo 'Copiando los ficheros'
+                sh 'npm install'
+                
             }
         }
         stage('Test') {
