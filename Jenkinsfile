@@ -1,11 +1,13 @@
 pipeline {
     agent any
-
+    tools {
+        nodejs 'nodejs'
+    }
     stages {
         stage('Build') {
             steps {
                 echo 'Copiando los ficheros'
-                bash 'npm install'
+                sh 'npm install'
                 
             }
         }
