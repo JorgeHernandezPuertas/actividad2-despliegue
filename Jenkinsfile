@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent{
+        docker {
+            image 'node:latest' //Utiliza la imagen oficial de node.js
+            args '-p 3000:3000' //opcional: mapea los puertos si es necesario
+        }
+    }
     stages {
         stage('Build') {
             steps {
