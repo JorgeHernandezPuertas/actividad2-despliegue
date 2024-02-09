@@ -16,6 +16,15 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                sh 'npm run build'
+                sh 'npm install -g serve'
+            }
+        }
+        stage('Execute'){
+            steps{
+                echo 'Executing...'
+                sh 'npm install -g serve'
+                sh 'serve -s build -l 3000'
             }
         }
     }
