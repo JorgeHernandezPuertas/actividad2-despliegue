@@ -5,7 +5,7 @@ pipeline {
             steps {
                 echo 'Copiando los ficheros'
                 sh 'npm install'
-                
+                sh 'npm run build'                
             }
         }
         stage('Test') {
@@ -16,7 +16,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh 'npm run build'
+                echo 'Copiando los ficheros hasta la ruta de despliegue'
                 sh 'npm install -g serve'
             }
         }
