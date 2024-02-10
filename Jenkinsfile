@@ -23,7 +23,6 @@ pipeline {
         stage('Execute'){
             steps{
                 echo 'Executing...'
-                sh 'npm install -g serve'
                 sh 'serve -s build -l 3000'
             }
         }
