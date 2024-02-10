@@ -23,7 +23,7 @@ pipeline {
         stage('Execute'){
             steps{
                 echo 'Executing...'
-                sh 'serve -s build -l 3000 &'
+                sh 'serve -s build -l 3000'
             }
         }
     }
